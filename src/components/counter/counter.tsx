@@ -1,12 +1,13 @@
-import { useStore } from "@/store";
 import { computed, defineComponent } from "vue";
+import { useCounterModule } from "@/store";
 
 export default defineComponent({
   name: "Counter",
   setup() {
-    const store = useStore();
+    const counter = useCounterModule();
+    const count = computed(() => counter.count);
     return {
-      count: computed(() => store.state.count),
+      count,
     };
   },
   render() {

@@ -1,13 +1,11 @@
-import { MutationType, useStore } from "@/store";
 import { defineComponent } from "vue";
+import { useCounterModule } from "@/store";
 
 export default defineComponent({
   name: "CounterIncrementButton",
   setup() {
-    const store = useStore();
-    const increment = () => {
-      store.commit(MutationType.INCREMENT, undefined);
-    };
+    const counter = useCounterModule();
+    const increment = () => counter.increment(1);
     return {
       increment,
     };
