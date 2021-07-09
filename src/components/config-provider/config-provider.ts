@@ -1,5 +1,5 @@
 import { defineComponent, provide, ref } from "vue";
-import { ConfigInjectionKey, UpdateConfigModeInjectionKey } from "@/inject";
+import { ConfigInjectionKey, UpdateConfigModeInjectionKey } from "./symbols";
 import { Config, Mode } from "@/model";
 
 export default defineComponent({

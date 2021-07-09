@@ -1,10 +1,10 @@
 import { computed, defineComponent } from "vue";
 import {
   ConfigInjectionKey,
-  injectStrict,
   UpdateConfigModeInjectionKey,
-} from "@/inject";
+} from "@/components/config-provider";
 import { Mode } from "@/model";
+import { injectStrict } from "@/lib/inject-strict";
 
 export default defineComponent({
   name: "DisplayModeControl",
